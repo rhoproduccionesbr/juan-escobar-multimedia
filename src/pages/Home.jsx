@@ -11,8 +11,10 @@ const Home = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const timeStr = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  const dateStr = time.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+  const userLocale = typeof navigator !== 'undefined' && navigator.language ? navigator.language : 'es-ES';
+  const timeStr = time.toLocaleTimeString(userLocale, { hour: '2-digit', minute: '2-digit' });
+  const rawDateStr = time.toLocaleDateString(userLocale, { weekday: 'long', day: 'numeric', month: 'long' });
+  const dateStr = rawDateStr.charAt(0).toUpperCase() + rawDateStr.slice(1);
 
   return (
     <div className="flex flex-col items-center justify-center p-4 w-full h-full max-w-2xl mx-auto mt-2 md:mt-4">

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Player from './components/Player';
+import PwaInstallModal from './components/PwaInstallModal';
 import Home from './pages/Home';
 import Novedades from './pages/Novedades';
 import SobreNosotros from './pages/SobreNosotros';
@@ -54,6 +55,7 @@ function Layout() {
       </main>
       
       <Player />
+      <PwaInstallModal />
     </div>
   );
 }
