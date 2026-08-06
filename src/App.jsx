@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Player from './components/Player';
 import PwaInstallModal from './components/PwaInstallModal';
 import Home from './pages/Home';
 import Novedades from './pages/Novedades';
@@ -49,15 +47,15 @@ function Layout() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#020817]/60 to-[#020817]"></div>
       </div>
 
-      <Navbar />
-      
-      <main className="flex-grow pt-28 pb-32 flex items-center justify-center z-10 w-full">
+      {/* Contenido principal — padding inferior para la barra de navegación */}
+      <main className="flex-grow pt-6 pb-36 flex items-center justify-center z-10 w-full">
         <div className="w-full h-full flex flex-col justify-center">
           <Outlet />
         </div>
       </main>
-      
-      <Player />
+
+      {/* Barra de navegación inferior con play integrado */}
+      <Navbar />
       <PwaInstallModal />
     </div>
   );
