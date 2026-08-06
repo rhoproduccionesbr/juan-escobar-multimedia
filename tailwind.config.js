@@ -6,11 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1A1A2E',
-        secondary: '#16213E',
-        accent: '#E2B53F',
-        'accent-alt': '#C4922A',
-        surface: '#0F3460',
+        primary: '#020817',
+        secondary: '#050f27',
+        accent: '#2563eb',
+        'accent-alt': '#1d4ed8',
+        'accent-bright': '#3b82f6',
+        surface: '#0d1a3a',
       },
       fontFamily: {
         heading: ['Outfit', 'sans-serif'],

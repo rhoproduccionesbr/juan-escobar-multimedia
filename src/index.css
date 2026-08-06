@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #050505; /* Black */
-  --color-secondary: #0A0A0A; /* Darkest grey */
-  --color-accent: #f97316; /* Orange */
-  --color-accent-alt: #ea580c; /* Deeper orange for hover */
-  --color-surface: #111111; /* Slightly lighter black for cards */
+  --color-primary: #020817; /* Deep blue-black */
+  --color-secondary: #050f27; /* Dark navy */
+  --color-accent: #2563eb; /* Electric blue */
+  --color-accent-alt: #1d4ed8; /* Deeper blue for hover */
+  --color-accent-bright: #3b82f6; /* Bright blue for highlights */
+  --color-surface: #0d1a3a; /* Dark blue surface for cards */
   
   --color-text-primary: #FFFFFF;
-  --color-text-secondary: #9ca3af;
+  --color-text-secondary: #93c5fd;
 
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;

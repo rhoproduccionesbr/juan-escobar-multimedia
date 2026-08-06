@@ -28,22 +28,25 @@ function Layout() {
 
   return (
     <div className="flex flex-col min-h-screen text-[var(--color-text-primary)] relative">
-      {/* Dynamic Background */}
-      <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden bg-[#050505]">
+      {/* Dynamic Background — Azul profundo */}
+      <div className="fixed inset-0 w-full h-full z-[-1] overflow-hidden bg-[#020817]">
         {STUDIO_IMAGES.map((img, i) => (
           <div 
             key={i}
             className="absolute inset-0 w-full h-full transition-opacity duration-3000 ease-in-out"
             style={{ 
-              opacity: i === bgIndex ? 0.4 : 0,
+              opacity: i === bgIndex ? 0.25 : 0,
               backgroundImage: `url(${img})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           />
         ))}
-        {/* Soft radial overlay for Premium feel */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#050505]/70 to-[#050505]"></div>
+        {/* Blue nebula overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37,99,235,0.12)_0%,_transparent_60%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(29,78,216,0.08)_0%,_transparent_60%)]"></div>
+        {/* Soft vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#020817]/60 to-[#020817]"></div>
       </div>
 
       <Navbar />
